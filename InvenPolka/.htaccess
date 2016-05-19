@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+   RewriteEngine on
+   RewriteRule    ^$ app/webroot/    [L]
+   RewriteRule    (.*) app/webroot/$1 [L]
+</IfModule>
+<IfModule mod_php5-6.c>
+  php_flag session.auto_start 1
+  php_admin_flag safe_mode on
+</IfModule>
