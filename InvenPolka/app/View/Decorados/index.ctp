@@ -7,23 +7,14 @@ div.input {
         margin: 0px 0 0px 25% !important;
         border: 1px solid #ccc; }
 
+		 .stdform input[type=checkbox], .stdform input[type=radio] {
+    margin: 5px;
+ } 
 </style>
 
-<table  id="configurationTable" class ="table table-bordered" width="100%"  style="width: 100%;">
-        <thead>
-                <tr>
-                <th style="display:none;">Id</th>
- 				<th>Nombre</th>
-                <th>Categorias</th>
-                <th>Acciones</th>
-		</tr>
-        </thead>
-        <tbody>
-      	</tbody>
 
-</table>
 <h4 class="widgettitle nomargin shadowed">Nuevo Decorado</h4>
-<div class="widgetcontent bordered shadowed nopadding">
+<div >
 <?php
 echo $this->Form->create('Decorado',array('class' => 'stdform stdform2','inputDefaults' => array('div' => array('class' => 'field'))));
 ?>
@@ -32,36 +23,55 @@ echo $this->Form->create('Decorado',array('class' => 'stdform stdform2','inputDe
 
 <?php
 echo $this->Form->input('Nombre',array('class'=>'input-medium','div'=>false,'label'=>false,'before'=>'<p>
-                                                                                              <label style="display: inline-block; padding: 20px 0 0 45px; vertical-align: middle; text-align: left; font-weight: bold;">Nombre</label>
-                                                                                              <span class="field">',
-                                                                                              'after'=>'</span></p>'));
+<label style="display: inline-block; padding: 20px 0 0 45px; vertical-align: middle; text-align: left; font-weight: bold;">Nombre</label><span>','after'=>'</span></p>'));
 ?>
-<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
 </div>
 <div class="conteinerPrinc-2">
 
     <p>
         <label>Categorias</label>
-        <span class="field">
+        <span>
     <?php
-    echo $this->Form->input('IdCategoria',array('type'=>'select','multiple' => 'checkbox','required' => 'true','options'=>$categorias,'empty'=>false,'class'=>'uniformselect'                                                                                                                      ,'div'=>true,'label'=>false,'class'=>'select',
-                                                                                        'before'=>' ',
-                                                                                                    'after'=>''));
+    echo $this->Form->input('IdCategoria',array('type'=>'select','multiple' => 'checkbox','required' => 'true','options'=>$categorias,'empty'=>false,'class'=>'uniformselect','div'=>true,'label'=>false,'class'=>'select','before'=>' ','after'=>''));
     
     ?>
         </span>
     </p>
 </div>
-</div>
+.
 <div class="botonera widgettitle">
-	<p class="stdformbutton">
+    <p style="margin-right: 10px;">
         <button class="btn btn-primary save" style="float:right;margin-left: 10px;">Guardar</button>
     </p>
 </div>
+
+
+</div>
+
+
+.
+<h4 class="widgettitle nomargin shadowed">Listado de Decorados</h4>
+
+<table  id="configurationTable" class ="table table-bordered" width="100%"  style="width: 100%;">
+        <thead>
+                <tr>
+                <th style="display:none;">Id</th>
+                <th>Nombre</th>
+                <th>Categorias</th>
+                <th>Acciones</th>
+            </tr>
+         </thead>
+        <tbody>
+        </tbody>
+</table>
+
+<div class="botonera widgettitle">
+
+</div>
+
 
 <?php
 echo $this->Form->end();
 ?>
 
-
-<div >

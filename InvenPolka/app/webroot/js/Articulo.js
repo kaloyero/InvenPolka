@@ -317,8 +317,15 @@ var Articulo = new Class({
 
      },
      onUpdated: function(){
-             this.parent();
-             translator.show(this.type);
+		 var self=this
+             /*this.parent();
+             translator.show(this.type);*/
+			  self.saveTableStatus();
+                    if (self.currentStatus=="Search"){
+                        translator.search("articulo", jQuery(".formBuscador"));
+                    }else{
+                        translator.show("articulo");
+                    }
     },
     onRetrievedConfiguraciones: function(data){
         var self=this;
@@ -415,6 +422,7 @@ var Articulo = new Class({
     },
     afterDataTable:function(data){
         var self=this;
+		this.removerBasuraPluginZoom()
         this.drawTableWithThumbnails(data);
         this.toogleToolbar();
         jQuery('.edit').bind("click", function(e) {

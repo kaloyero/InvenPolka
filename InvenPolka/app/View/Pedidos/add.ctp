@@ -27,8 +27,8 @@ echo $this->Form->create('Pedido',array('class' => 'stdform stdform2','inputDefa
 </div>
 <div class="conteinerPrinc-2">
 <?php
-echo $this->Form->input('Descripcion',array('type' => 'textarea','placeholder'=>'Ingresar lugar y hora de entrega.','class'=>'span5','div'=>false,'label'=>false,'before'=>'<p>
-								                                <label style="float: left;">Comentarios</label>
+echo $this->Form->input('Descripcion',array('type' => 'textarea','rows' => '3', 'cols' => '5','placeholder'=>'Esta descripcion se usará para identificar rapidamente el pedido.','class'=>'span5','div'=>false,'label'=>false,'before'=>'<p>
+								                                <label style="float: left;">Palabras Claves</label>
 								                                <span class="field float">',
 																'after'=>'</span></p>','pattern' => '.*\S+.*'));
 

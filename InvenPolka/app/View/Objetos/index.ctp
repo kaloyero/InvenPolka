@@ -7,29 +7,13 @@ div.input {
         margin: 0px 0 0px 25% !important;
         border: 1px solid #ccc; }
 
-        table {
-                max-height:400px;
-                overflow-x: scroll;
-                display:block;
-                width: 100% !important;
-        }
+ .stdform input[type=checkbox], .stdform input[type=radio] {
+    margin: 5px;
+ }                      
 
 </style>
 
-<h4 class="widgettitle nomargin shadowed">Listado de Objetos</h4>
 
-<table  id="configurationTable" class ="table table-bordered" width="100%"  style="width: 100%;">
-        <thead>
-                <tr>
-                <th style="display:none;">Id</th>
-                <th>Nombre</th>
-                <th>Categorias</th>
-                <th>Acciones</th>
-                </tr>
-        </thead>
-        <tbody>
-        </tbody>
-</table>
 
 
 <h4 class="widgettitle nomargin shadowed">Nuevo Objeto</h4>
@@ -58,15 +42,32 @@ echo $this->Form->input('Nombre',array('class'=>'input-medium','div'=>false,'lab
         </span>
     </p>															
 </div>
-</div>
-<div class="botonera widgettitle nomargin">
-	<p class="stdformbutton">
+.
+<div class="botonera widgettitle">
+    <p style="margin-right: 10px;">
         <button class="btn btn-primary save" style="float:right;margin-left: 10px;">Guardar</button>
     </p>
+</div>
+</div>
+
+.
+<h4 class="widgettitle nomargin shadowed">Listado de Objetos</h4>
+
+<table  id="configurationTable" class ="table table-bordered" width="100%"  style="width: 100%;">
+        <thead>
+                <tr>
+                <th style="display:none;">Id</th>
+                <th>Nombre</th>
+                <th>Categorias</th>
+                <th>Acciones</th>
+                </tr>
+        </thead>
+        <tbody>
+        </tbody>
+</table>
+<div class="botonera widgettitle nomargin">
+
 </div>																
-<br><br><br>
 <?php
 echo $this->Form->end();
 ?>
-
-
