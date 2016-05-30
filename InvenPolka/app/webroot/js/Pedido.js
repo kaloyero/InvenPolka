@@ -9,6 +9,7 @@ var Pedido = new Class({
      onSaved:function() {
          this.parent();
           translator.show("articulo");
+          jQuery('#articulo').click();
      },
       onSavedConfirmado:function() {
           //Esto actualiza la tabla
