@@ -133,7 +133,7 @@ var Render = new Class({
          //Agregamos los calendar
          jQuery(".fecha").datepicker(
               {
-                  dateFormat: 'yy-M-dd' ,
+                  dateFormat: 'yy-mm-dd' ,
                   //Lo que ponemos es a continuacion,es porque cuando aparece el mensaje de que el campo de date es requerido,no se va
                   //cuando terminamos de elegir,por un problema que debe tener Html required con este plugin,entonces lo que hago
                   //es que cuando termina de elegir,si esta presente el label de error,lo volamos
