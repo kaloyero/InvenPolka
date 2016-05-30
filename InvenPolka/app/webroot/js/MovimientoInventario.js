@@ -14,6 +14,7 @@ var MovimientoInventario = new Class({
 
          }else{
              translator.show("articulo");
+             jQuery('#articulo').click();
 
          }
      },
