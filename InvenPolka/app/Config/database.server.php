@@ -71,7 +71,7 @@ class DATABASE_CONFIG {
 		'database' => 'r0000324_inventa',
 		'schema' => '',
 		'prefix' => '',
-		//'encoding' => 'utf8',
+		'encoding' => 'utf8',
 	);
 
 	public $test = array(
