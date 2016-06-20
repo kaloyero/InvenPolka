@@ -62,7 +62,10 @@ $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto"
         <div class="leftmenu">
             <ul class="nav nav-tabs nav-stacked">
                     <li class="nav-header animate4 fadeInUp">Navegacion</li>
-		<li class="active  animate8 fadeInUp"><a id="ayuda" class="option resaltado"><span class="icon-th-list"></span><B> AYUDA</B></a></li>
+					<?php if (! empty($privis['menuAyuda'])) { ?>
+						<li class="active  animate8 fadeInUp"><a id="ayuda" class="option resaltado"><span class="icon-th-list"></span><B> <?php echo $privis['menuAyuda']['nombre'] ?></B></a></li>
+					<?php } ?>
+						
 					<?php if (! empty($privis['menuArticulos'])) { ?>
 						<li class="active  animate8 fadeInUp"><a id="articulo" class="option resaltado"><span class="icon-th-list"></span><B> <?php echo $privis['menuArticulos']['nombre'] ?></B></a></li>
 					<?php } ?>
@@ -234,7 +237,9 @@ $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto"
                         	<li><a href="#" class="changePass"><span class="icon-edit"></span> <?php echo $privis['menuCambioPass']['nombre'] ?></a></li>
 						<?php } ?>
                         <li class="divider"></li>
-						<li><a href="#" class="ayuda"><span class="icon-edit"></span> Ayuda</a></li>
+						<?php if (! empty($privis['menuAyuda'])) { ?>						
+							<li><a href="#" class="ayuda"><span class="icon-edit"></span> <?php echo $privis['menuAyuda']['nombre'] ?></a></li>
+						<?php } ?>
 
                         <li><a href="/usuarios/logOut" class="logOut"><span class="icon-off"></span> Salir</a></li>
                     </ul>
